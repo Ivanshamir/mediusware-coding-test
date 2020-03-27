@@ -9,3 +9,10 @@ require('./jquery-ui');
 require('./Chart');
 require('./bulk');
 
+window.Vue = require('vue');
+
+Vue.component('history-table', require('./components/History.vue').default);
+
+const app = new Vue({
+    el: '#app'
+});
