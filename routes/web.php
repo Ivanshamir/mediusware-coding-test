@@ -462,3 +462,4 @@ Route::post('/app/bulk.ly/free/signUp/{code}','Auth\RegisterController@validUser
 
 //history
 Route::get('/history', 'HistoryController@index');
+Route::get('/buffer-result', 'HistoryController@bufferResult');

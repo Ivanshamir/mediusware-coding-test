@@ -5,14 +5,20 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 require('./bootstrap');
-require('./jquery-ui');
-require('./Chart');
-require('./bulk');
 
 window.Vue = require('vue');
+window.axios = require('axios');
+import moment from 'moment';
 
-Vue.component('history-table', require('./components/History.vue').default);
+Vue.component('history', require('./components/History.vue'));
 
+Vue.component('pagination', require('./components/Pagination.vue'));
+Vue.filter('formatDate', function (created) {
+    return moment(created).format('Do MMM YYYY h:mm a')
+});
+Vue.filter('upText', function(text){
+    return text.charAt(0).toUpperCase() + text.slice(1)
+});
 const app = new Vue({
-    el: '#app'
+    el: '#history'
 });

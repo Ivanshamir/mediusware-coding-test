@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
-    <div class="container-fluid" id="history">
-        <history-table></history-table>
+    <div class="container-fluid app-body" id="history">
+        <history></history>
     </div>
 
 <?php $__env->stopSection(); ?>
